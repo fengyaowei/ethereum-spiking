@@ -8,6 +8,11 @@ const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
 const myTokenContractABI = require('./MyToken.json');
 const MyTokenContract = web3.eth.contract(myTokenContractABI); // 获得合约对象
 
+// 此处已经部署成功，不需再部署。
+//const myTokenContractByteCode = require('./MyToken.bin');
+//const MyTokenContractData = {data:myTokenContractByteCode, from:account,gas:999999};
+//MyTokenContract.new(MyTokenContractData);
+
 // 展示部署合约内账户及代币
 const synchSmartContract = () => {
   let contractAddress = $('#contract-address').val();
