@@ -29,7 +29,7 @@ contract MyToken {
     return true;// 完成转移交易代币过程
   }
   
-  // 查看账户的代币余额
+  // 查看账户的代币余额，constant==view（不修改状态，可读），pure(不读，不修)
   function balanceOf(address owner) public constant returns (uint256) {
     return balances[owner];
   }
